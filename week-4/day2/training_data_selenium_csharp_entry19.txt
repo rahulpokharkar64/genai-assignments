@@ -1,0 +1,43 @@
+===HTML===
+<input id="uploadedFile" name="uploadedFile" type="file" size="30" maxlength="" class="inputBox" onchange="">
+<input type="submit" value="Upload and Import" class="smallSubmit" onclick="submitFormAndReplaceButtonTextWithSingleClick(this, 'Uploading... Please Wait');" id="ext-gen593">
+
+===CSHARP===
+using OpenQA.Selenium;
+
+namespace LeafTaps.Pages
+{
+    /// <summary>
+    /// Page object generated strictly from the supplied HTML DOM for UploadPage.
+    /// </summary>
+    public class UploadPage
+    {
+        private readonly IWebDriver driver;
+
+        public UploadPage(IWebDriver driver)
+        {
+            this.driver = driver;
+        }
+
+        private IWebElement FileFileInput => driver.FindElement(By.Id("uploadedFile"));
+        private IWebElement UploadAndImportButton => driver.FindElement(By.XPath("//input[@value='Upload and Import']"));
+
+        /// <summary>
+        /// Uploads a file using the File field.
+        /// </summary>
+        public UploadPage UploadFile(string filePath)
+        {
+            FileFileInput.SendKeys(filePath);
+            return this;
+        }
+
+        /// <summary>
+        /// Clicks the Upload and Import element.
+        /// </summary>
+        public UploadPage ClickUploadAndImport()
+        {
+            UploadAndImportButton.Click();
+            return this;
+        }
+    }
+}
