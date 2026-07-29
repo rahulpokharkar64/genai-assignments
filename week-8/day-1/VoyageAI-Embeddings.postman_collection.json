@@ -1,0 +1,271 @@
+{
+  "info": {
+    "name": "Voyage AI Embeddings API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.voyageai.com/v1"
+    },
+    {
+      "key": "voyage_api_key",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "1. Single Text",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{voyage_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"What is DevOps?\",\n  \"model\": \"voyage-3-large\",\n  \"input_type\": \"query\"\n}"
+        }
+      }
+    },
+    {
+      "name": "2. Multiple Documents",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{voyage_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": [\n    \"Docker\",\n    \"Terraform\",\n    \"Kubernetes\"\n  ],\n  \"model\": \"voyage-3-large\",\n  \"input_type\": \"document\"\n}"
+        }
+      }
+    },
+    {
+      "name": "3. Product Search",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{voyage_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": [\n    \"iPhone 16 Pro\",\n    \"Galaxy S26\"\n  ],\n  \"model\": \"voyage-3-large\",\n  \"input_type\": \"document\"\n}"
+        }
+      }
+    },
+    {
+      "name": "4. FAQ",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{voyage_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"How do I reset password?\",\n  \"model\": \"voyage-3-large\",\n  \"input_type\": \"query\"\n}"
+        }
+      }
+    },
+    {
+      "name": "5. Code",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{voyage_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"public static void main(String[] args){}\",\n  \"model\": \"voyage-code-3\",\n  \"input_type\": \"document\"\n}"
+        }
+      }
+    },
+    {
+      "name": "6. SQL",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{voyage_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"SELECT * FROM employees\",\n  \"model\": \"voyage-code-3\",\n  \"input_type\": \"document\"\n}"
+        }
+      }
+    },
+    {
+      "name": "7. HTML",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{voyage_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"<html><h1>Hello</h1></html>\",\n  \"model\": \"voyage-3-large\",\n  \"input_type\": \"document\"\n}"
+        }
+      }
+    },
+    {
+      "name": "8. JSON",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{voyage_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"{\\\"name\\\":\\\"Rahul\\\"}\",\n  \"model\": \"voyage-3-large\",\n  \"input_type\": \"document\"\n}"
+        }
+      }
+    },
+    {
+      "name": "9. Multilingual",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{voyage_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": [\n    \"Hello\",\n    \"\\u0928\\u092e\\u0938\\u094d\\u0924\\u0947\",\n    \"Bonjour\",\n    \"\\u3053\\u3093\\u306b\\u3061\\u306f\"\n  ],\n  \"model\": \"voyage-3-large\",\n  \"input_type\": \"document\"\n}"
+        }
+      }
+    },
+    {
+      "name": "10. Output Dimension",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{voyage_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"Cloud\",\n  \"model\": \"voyage-3-large\",\n  \"input_type\": \"query\",\n  \"output_dimension\": 512\n}"
+        }
+      }
+    },
+    {
+      "name": "11. Output DType",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{voyage_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"input\": \"AI\",\n  \"model\": \"voyage-3-large\",\n  \"input_type\": \"query\",\n  \"output_dtype\": \"int8\"\n}"
+        }
+      }
+    }
+  ]
+}

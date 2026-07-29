@@ -1,0 +1,202 @@
+{
+  "info": {
+    "name": "Cohere Embeddings API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.cohere.com/v2"
+    },
+    {
+      "key": "cohere_api_key",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "1. Text Embedding",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{cohere_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embed"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"texts\": [\n    \"Hello\",\n    \"AI\",\n    \"ML\"\n  ],\n  \"model\": \"embed-v4.0\",\n  \"input_type\": \"classification\",\n  \"embedding_types\": [\n    \"float\"\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "2. Search Document",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{cohere_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embed"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"texts\": [\n    \"Docker\",\n    \"Terraform\"\n  ],\n  \"model\": \"embed-v4.0\",\n  \"input_type\": \"search_document\"\n}"
+        }
+      }
+    },
+    {
+      "name": "3. Search Query",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{cohere_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embed"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"texts\": [\n    \"How to deploy Kubernetes?\"\n  ],\n  \"model\": \"embed-v4.0\",\n  \"input_type\": \"search_query\"\n}"
+        }
+      }
+    },
+    {
+      "name": "4. Classification",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{cohere_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embed"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"texts\": [\n    \"Positive\",\n    \"Negative\"\n  ],\n  \"model\": \"embed-v4.0\",\n  \"input_type\": \"classification\"\n}"
+        }
+      }
+    },
+    {
+      "name": "5. Clustering",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{cohere_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embed"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"texts\": [\n    \"Apple\",\n    \"Banana\",\n    \"BMW\",\n    \"Audi\"\n  ],\n  \"model\": \"embed-v4.0\",\n  \"input_type\": \"clustering\"\n}"
+        }
+      }
+    },
+    {
+      "name": "6. Multi Embedding Types",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{cohere_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embed"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"texts\": [\n    \"OpenAI\"\n  ],\n  \"model\": \"embed-v4.0\",\n  \"input_type\": \"classification\",\n  \"embedding_types\": [\n    \"float\",\n    \"int8\",\n    \"uint8\",\n    \"binary\",\n    \"ubinary\"\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "7. Image",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{cohere_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embed"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"images\": [\n    \"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAA...\"\n  ],\n  \"model\": \"embed-v4.0\",\n  \"input_type\": \"image\"\n}"
+        }
+      }
+    },
+    {
+      "name": "8. Mixed",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{cohere_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embed"
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"inputs\": [\n    {\n      \"content\": [\n        {\n          \"type\": \"text\",\n          \"text\": \"Mountain\"\n        },\n        {\n          \"type\": \"image\",\n          \"image\": \"data:image/jpeg;base64,/9j/4AA...\"\n        }\n      ]\n    }\n  ],\n  \"model\": \"embed-v4.0\",\n  \"input_type\": \"search_document\"\n}"
+        }
+      }
+    }
+  ]
+}

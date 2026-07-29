@@ -1,0 +1,415 @@
+{
+  "info": {
+    "name": "Jina AI Embeddings API",
+    "_postman_id": "b4b2d1b6-1111-4444-9999-jinaembed",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.jina.ai/v1"
+    },
+    {
+      "key": "jina_api_key",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "1. Text Embedding",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jina_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "embeddings"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"jina-embeddings-v4\",\n  \"input\": [\n    \"Hello World\"\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "2. Search Query",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jina_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "embeddings"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"jina-embeddings-v4\",\n  \"task\": \"retrieval.query\",\n  \"input\": [\n    \"How to deploy Kubernetes?\"\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "3. Search Document",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jina_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "embeddings"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"jina-embeddings-v4\",\n  \"task\": \"retrieval.passage\",\n  \"input\": [\n    \"Docker is a container platform.\",\n    \"Terraform provisions infrastructure.\"\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "4. Code",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jina_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "embeddings"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"jina-embeddings-v4\",\n  \"task\": \"code.passage\",\n  \"input\": [\n    \"public static void main(String[] args){ System.out.println(\\\"Hello\\\"); }\"\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "5. SQL",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jina_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "embeddings"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"jina-embeddings-v4\",\n  \"task\": \"code.passage\",\n  \"input\": [\n    \"SELECT * FROM employees WHERE salary>100000\"\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "6. HTML",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jina_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "embeddings"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"jina-embeddings-v4\",\n  \"input\": [\n    \"<html><body><h1>Hello</h1></body></html>\"\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "7. JSON",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jina_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "embeddings"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"jina-embeddings-v4\",\n  \"input\": [\n    \"{\\\"name\\\":\\\"Rahul\\\",\\\"role\\\":\\\"DevOps Lead\\\"}\"\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "8. Multilingual",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jina_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "embeddings"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"jina-embeddings-v4\",\n  \"input\": [\n    \"Hello\",\n    \"\\u0928\\u092e\\u0938\\u094d\\u0924\\u0947\",\n    \"Bonjour\",\n    \"\\u3053\\u3093\\u306b\\u3061\\u306f\",\n    \"Hola\"\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "9. Image URL",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jina_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "embeddings"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"jina-embeddings-v4\",\n  \"input\": [\n    {\n      \"image\": \"https://i.ibb.co/r5w8hG8/beach2.jpg\"\n    }\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "10. Mixed Text + Image",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jina_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "embeddings"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"jina-embeddings-v4\",\n  \"input\": [\n    {\n      \"text\": \"A beautiful beach\"\n    },\n    {\n      \"image\": \"https://i.ibb.co/r5w8hG8/beach2.jpg\"\n    }\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "11. Binary Embeddings",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jina_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "embeddings"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"jina-embeddings-v4\",\n  \"embedding_type\": \"binary\",\n  \"input\": [\n    \"Artificial Intelligence\"\n  ]\n}"
+        }
+      }
+    },
+    {
+      "name": "12. Reduced Dimensions",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": "Bearer {{jina_api_key}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/embeddings",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "embeddings"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"model\": \"jina-embeddings-v4\",\n  \"dimensions\": 512,\n  \"input\": [\n    \"Cloud Computing\"\n  ]\n}"
+        }
+      }
+    }
+  ]
+}

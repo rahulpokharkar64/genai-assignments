@@ -1,0 +1,233 @@
+{
+  "info": {
+    "name": "Sarvam AI - Text to Speech REST API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "https://api.sarvam.ai"
+    },
+    {
+      "key": "apiKey",
+      "value": "YOUR_SARVAM_API_KEY"
+    }
+  ],
+  "item": [
+    {
+      "name": "English",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "api-subscription-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/text-to-speech",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "text-to-speech"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"Welcome to Sarvam AI!\",\n  \"target_language_code\": \"en-IN\",\n  \"speaker\": \"shubh\",\n  \"model\": \"bulbul:v3\",\n  \"pace\": 1.0,\n  \"temperature\": 0.6\n}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"200 OK\",()=>pm.response.to.have.status(200));",
+              "let j=pm.response.json();",
+              "pm.expect(j).to.have.property(\"request_id\");",
+              "pm.expect(j).to.have.property(\"audios\");",
+              "pm.collectionVariables.set(\"audioBase64\",j.audios[0]);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Hindi",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "api-subscription-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/text-to-speech",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "text-to-speech"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"\\u0928\\u092e\\u0938\\u094d\\u0924\\u0947! \\u0906\\u092a\\u0915\\u093e \\u0938\\u094d\\u0935\\u093e\\u0917\\u0924 \\u0939\\u0948\\u0964\",\n  \"target_language_code\": \"hi-IN\",\n  \"speaker\": \"shubh\",\n  \"model\": \"bulbul:v3\",\n  \"pace\": 1.0,\n  \"temperature\": 0.6\n}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"200 OK\",()=>pm.response.to.have.status(200));",
+              "let j=pm.response.json();",
+              "pm.expect(j).to.have.property(\"request_id\");",
+              "pm.expect(j).to.have.property(\"audios\");",
+              "pm.collectionVariables.set(\"audioBase64\",j.audios[0]);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Marathi",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "api-subscription-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/text-to-speech",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "text-to-speech"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"\\u0928\\u092e\\u0938\\u094d\\u0915\\u093e\\u0930! \\u0924\\u0941\\u092e\\u091a\\u093e \\u0926\\u093f\\u0935\\u0938 \\u091b\\u093e\\u0928 \\u091c\\u093e\\u0935\\u094b.\",\n  \"target_language_code\": \"mr-IN\",\n  \"speaker\": \"shubh\",\n  \"model\": \"bulbul:v3\",\n  \"pace\": 1.0,\n  \"temperature\": 0.6\n}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"200 OK\",()=>pm.response.to.have.status(200));",
+              "let j=pm.response.json();",
+              "pm.expect(j).to.have.property(\"request_id\");",
+              "pm.expect(j).to.have.property(\"audios\");",
+              "pm.collectionVariables.set(\"audioBase64\",j.audios[0]);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Tamil",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "api-subscription-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/text-to-speech",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "text-to-speech"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"\\u0bb5\\u0ba3\\u0b95\\u0bcd\\u0b95\\u0bae\\u0bcd!\",\n  \"target_language_code\": \"ta-IN\",\n  \"speaker\": \"shubh\",\n  \"model\": \"bulbul:v3\",\n  \"pace\": 1.0,\n  \"temperature\": 0.6\n}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"200 OK\",()=>pm.response.to.have.status(200));",
+              "let j=pm.response.json();",
+              "pm.expect(j).to.have.property(\"request_id\");",
+              "pm.expect(j).to.have.property(\"audios\");",
+              "pm.collectionVariables.set(\"audioBase64\",j.audios[0]);"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Hinglish",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "api-subscription-key",
+            "value": "{{apiKey}}"
+          },
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/text-to-speech",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "text-to-speech"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"Hello Rahul, aaj ka din bahut accha hai!\",\n  \"target_language_code\": \"hi-IN\",\n  \"speaker\": \"shubh\",\n  \"model\": \"bulbul:v3\",\n  \"pace\": 1.0,\n  \"temperature\": 0.6\n}"
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"200 OK\",()=>pm.response.to.have.status(200));",
+              "let j=pm.response.json();",
+              "pm.expect(j).to.have.property(\"request_id\");",
+              "pm.expect(j).to.have.property(\"audios\");",
+              "pm.collectionVariables.set(\"audioBase64\",j.audios[0]);"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
