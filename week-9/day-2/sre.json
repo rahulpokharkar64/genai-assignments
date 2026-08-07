@@ -1,0 +1,77 @@
+{
+    "sessionId": "424e7bf8-a921-4127-ac80-863c91ac0fae",
+    "domain": "sre-activity-query",
+    "sourceType": "document",
+    "testCases": [
+        {
+            "id": "TC-001",
+            "title": "Rollback Decision Support - Valid Rollback Scenario",
+            "steps": [
+                "1. Retrieve the current deployment version from the service registry.",
+                "2. Identify the last stable deployment version from the deployment history.",
+                "3. Verify the success status of the last stable version through the deployment verification logs.",
+                "4. Initiate a rollback to the last stable version.",
+                "5. Monitor the application logs for rollback success message.",
+                "6. Confirm that the deployment health checks indicate the service is healthy post-rollback."
+            ],
+            "expectedResult": "The rollback should be executed successfully, and the service should be healthy."
+        },
+        {
+            "id": "TC-002",
+            "title": "Rollback Decision Support - Invalid Rollback Scenario",
+            "steps": [
+                "1. Attempt to retrieve the last stable deployment version when there are no prior successful deployments.",
+                "2. Verify that the rollback process rejects the request due to absence of rollback target.",
+                "3. Check for appropriate error logs generated during the rollback attempt."
+            ],
+            "expectedResult": "The system should prevent the rollback and log an appropriate error message."
+        },
+        {
+            "id": "TC-003",
+            "title": "Rollback Decision Support - Rollback with Failed Health Checks",
+            "steps": [
+                "1. Deploy a new version that is known to cause failures.",
+                "2. Perform health checks that fail due to application errors.",
+                "3. Attempt to initiate a rollback to the last stable version despite failed health checks.",
+                "4. Monitor application logs for rollback attempt messages.",
+                "5. Verify that the system blocks the rollback process and raises an alert for operational teams."
+            ],
+            "expectedResult": "The system should block the rollback due to failed health checks and route an alert to on-call engineers."
+        },
+        {
+            "id": "TC-004",
+            "title": "Rollback Decision Support - Manual Interventions",
+            "steps": [
+                "1. Document an ongoing incident that requires rollback due to critical service impact.",
+                "2. Assign ownership of the incident to the SRE team.",
+                "3. Confirm the escalation workflow is initiated for additional resources.",
+                "4. Ensure manual rollback decisions are discussed in a multi-team meeting.",
+                "5. Initiate rollback and monitor for changes in availability dashboards."
+            ],
+            "expectedResult": "The rollback decision is executed with adequate communication and resource allocation while maintaining a clear record."
+        },
+        {
+            "id": "TC-005",
+            "title": "Rollback Decision Support - Alert Routing and Ownership Assignment",
+            "steps": [
+                "1. Deploy a version with known issues causing alerts.",
+                "2. Ensure alerts are routed to the correct escalation path based on severity.",
+                "3. Check if appropriate ownership is assigned to the incident.",
+                "4. Initiate rollback based on alert severity and ownership confirmation.",
+                "5. Validate the alerting and ownership process in the operational monitoring workflow."
+            ],
+            "expectedResult": "Alerts must be correctly routed and ownership assigned, leading to an informed rollback decision."
+        },
+        {
+            "id": "TC-006",
+            "title": "Rollback Decision Support - Edge Case of Concurrency",
+            "steps": [
+                "1. Initiate concurrent rollback requests for multiple deployments.",
+                "2. Monitor how system handles simultaneous rollback commands through service health checks.",
+                "3. Validate whether the system processes rollbacks sequentially without any failures.",
+                "4. Ensure that logs correlate correctly to each rollback instance."
+            ],
+            "expectedResult": "The system should process concurrent rollbacks without errors and maintain consistent service health."
+        }
+    ]
+}

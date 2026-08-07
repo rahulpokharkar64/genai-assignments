@@ -1,0 +1,89 @@
+{
+    "sessionId": "8253beae-3a9a-4120-a4bb-8d4f30fe06dd",
+    "domain": "travel-guide",
+    "sourceType": "document",
+    "testCases": [
+        {
+            "id": "TC-001",
+            "title": "Check Destination Support Response for Visa Guidance - Valid Request",
+            "steps": [
+                "1. Launch the travel application",
+                "2. Navigate to the 'Destination Support' section",
+                "3. Select a destination that requires a visa",
+                "4. Submit a request for visa guidance",
+                "5. Wait for the response from the support team"
+            ],
+            "expectedResult": "The system should display a timely and accurate response detailing visa requirements and guidance for the selected destination."
+        },
+        {
+            "id": "TC-002",
+            "title": "Check Destination Support Response for Visa Guidance - Invalid Destination",
+            "steps": [
+                "1. Launch the travel application",
+                "2. Navigate to the 'Destination Support' section",
+                "3. Enter a non-existent destination that does not require visa support",
+                "4. Submit the request",
+                "5. Wait for the response from the support team"
+            ],
+            "expectedResult": "The system should show an error message indicating that no visa information is available for the selected destination."
+        },
+        {
+            "id": "TC-003",
+            "title": "Check Destination Support Response for Visa Guidance - Network Failure",
+            "steps": [
+                "1. Launch the travel application",
+                "2. Navigate to the 'Destination Support' section",
+                "3. Select a destination requiring a visa",
+                "4. Simulate a network failure",
+                "5. Submit a request for visa guidance"
+            ],
+            "expectedResult": "The application should display a user-friendly error message indicating that the request could not be processed due to network issues."
+        },
+        {
+            "id": "TC-004",
+            "title": "Check Destination Support Response for Visa Guidance - Multiple Destination Requests",
+            "steps": [
+                "1. Launch the travel application",
+                "2. Navigate to the 'Destination Support' section",
+                "3. Submit requests for visa guidance for multiple destinations at once",
+                "4. Wait and observe the responses from the support team"
+            ],
+            "expectedResult": "The system should return correct and distinct responses for each destination's visa requirements in a timely manner."
+        },
+        {
+            "id": "TC-005",
+            "title": "Check Destination Support Response for Visa Guidance - Language Preference",
+            "steps": [
+                "1. Launch the travel application",
+                "2. Change the language preference of the application to a different language",
+                "3. Navigate to the 'Destination Support' section",
+                "4. Select a destination that requires a visa",
+                "5. Submit a request for visa guidance"
+            ],
+            "expectedResult": "The response from the support team should be displayed in the selected language, accurately conveying the visa requirements."
+        },
+        {
+            "id": "TC-006",
+            "title": "Check Destination Support Response for Visa Guidance - Accessibility Features",
+            "steps": [
+                "1. Launch the travel application with accessibility features enabled",
+                "2. Navigate to the 'Destination Support' section",
+                "3. Select a destination requiring visa information",
+                "4. Submit a request for visa guidance"
+            ],
+            "expectedResult": "The system should provide a clear and accessible response to the user's request for visa guidance, ensuring it can be easily understood by users with disabilities."
+        },
+        {
+            "id": "TC-007",
+            "title": "Check Destination Support Response for Visa Guidance - Response Time Validation",
+            "steps": [
+                "1. Launch the travel application",
+                "2. Navigate to the 'Destination Support' section",
+                "3. Select a destination that requires a visa",
+                "4. Submit a request for visa guidance",
+                "5. Measure the time taken for the response to be displayed"
+            ],
+            "expectedResult": "The response should be received within the stipulated maximum response time defined in the service level agreements (SLAs)."
+        }
+    ]
+}
