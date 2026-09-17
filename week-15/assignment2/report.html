@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Swagger AI Agent Report - 257cf6bf-e23f-45d7-b9f7-fdc39c921863</title>
+  <style>
+    :root { color-scheme: light; font-family: Arial, sans-serif; }
+    body { margin: 0; padding: 32px; color: #17202a; background: #f4f6f8; }
+    main { max-width: 1400px; margin: 0 auto; }
+    h1 { margin-bottom: 8px; } .meta { color: #5b6570; }
+    .summary { display: grid; grid-template-columns: repeat(4, minmax(130px, 1fr)); gap: 12px; margin: 24px 0; }
+    .card { background: white; border: 1px solid #dce1e6; border-radius: 8px; padding: 16px; }
+    .value { display: block; font-size: 28px; font-weight: 700; margin-top: 6px; }
+    table { width: 100%; border-collapse: collapse; background: white; border: 1px solid #dce1e6; }
+    th, td { text-align: left; vertical-align: top; padding: 12px; border-bottom: 1px solid #e7eaed; }
+    th { background: #eef1f4; } pre { max-width: 560px; overflow: auto; padding: 12px; background: #f4f6f8; }
+    .status { display: inline-block; padding: 4px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+    .passed { color: #176b3a; background: #d9f4e3; } .failed { color: #8a2c20; background: #fce0dc; } .error { color: #795500; background: #fff0bd; }
+    @media (max-width: 800px) { body { padding: 16px; } .summary { grid-template-columns: repeat(2, 1fr); } table { display: block; overflow-x: auto; white-space: nowrap; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Swagger AI Agent Run Report</h1>
+    <div class="meta">Run ID: 257cf6bf-e23f-45d7-b9f7-fdc39c921863 | Status: completed | Started: 2026-09-17T12:09:55.076Z | Completed: 2026-09-17T12:10:06.765Z</div>
+    <section class="summary">
+      <div class="card">Total<span class="value">41</span></div>
+      <div class="card">Passed<span class="value">5</span></div>
+      <div class="card">Failed<span class="value">36</span></div>
+      <div class="card">Errors<span class="value">0</span></div>
+    </section>
+    <h2>Test Results</h2>
+    <table>
+      <thead><tr><th>Status</th><th>Operation</th><th>Test Type</th><th>Expected</th><th>Actual</th><th>Duration (ms)</th><th>Evidence</th></tr></thead>
+      <tbody>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>uploadFile</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>415</td>
+    <td>1082</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/1/uploadImage&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 415,
+  &quot;body&quot;: {
+    &quot;code&quot;: 415,
+    &quot;type&quot;: &quot;unknown&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>uploadFile</td>
+    <td>missing-required-parameter</td>
+    <td>400</td>
+    <td>415</td>
+    <td>264</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/1/uploadImage&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 415,
+  &quot;body&quot;: {
+    &quot;code&quot;: 415,
+    &quot;type&quot;: &quot;unknown&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>uploadFile</td>
+    <td>unauthorized</td>
+    <td>401</td>
+    <td>415</td>
+    <td>265</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/1/uploadImage&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 415,
+  &quot;body&quot;: {
+    &quot;code&quot;: 415,
+    &quot;type&quot;: &quot;unknown&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>addPet</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>415</td>
+    <td>265</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 415,
+  &quot;body&quot;: {
+    &quot;code&quot;: 415,
+    &quot;type&quot;: &quot;unknown&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>addPet</td>
+    <td>unauthorized</td>
+    <td>401</td>
+    <td>415</td>
+    <td>262</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 415,
+  &quot;body&quot;: {
+    &quot;code&quot;: 415,
+    &quot;type&quot;: &quot;unknown&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>updatePet</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>415</td>
+    <td>268</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;PUT&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 415,
+  &quot;body&quot;: {
+    &quot;code&quot;: 415,
+    &quot;type&quot;: &quot;unknown&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>updatePet</td>
+    <td>unauthorized</td>
+    <td>401</td>
+    <td>415</td>
+    <td>267</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;PUT&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 415,
+  &quot;body&quot;: {
+    &quot;code&quot;: 415,
+    &quot;type&quot;: &quot;unknown&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status passed">PASSED</span></td>
+    <td>findPetsByStatus</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>200</td>
+    <td>261</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/findByStatus&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 200,
+  &quot;body&quot;: []
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>findPetsByStatus</td>
+    <td>missing-required-parameter</td>
+    <td>400</td>
+    <td>200</td>
+    <td>265</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/findByStatus&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 200,
+  &quot;body&quot;: []
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>findPetsByStatus</td>
+    <td>unauthorized</td>
+    <td>401</td>
+    <td>200</td>
+    <td>266</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/findByStatus&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 200,
+  &quot;body&quot;: []
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status passed">PASSED</span></td>
+    <td>findPetsByTags</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>200</td>
+    <td>266</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/findByTags&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 200,
+  &quot;body&quot;: []
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>findPetsByTags</td>
+    <td>missing-required-parameter</td>
+    <td>400</td>
+    <td>200</td>
+    <td>272</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/findByTags&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 200,
+  &quot;body&quot;: []
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>findPetsByTags</td>
+    <td>unauthorized</td>
+    <td>401</td>
+    <td>200</td>
+    <td>263</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/findByTags&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 200,
+  &quot;body&quot;: []
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>getPetById</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>404</td>
+    <td>265</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: {
+    &quot;code&quot;: 1,
+    &quot;type&quot;: &quot;error&quot;,
+    &quot;message&quot;: &quot;Pet not found&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>getPetById</td>
+    <td>missing-required-parameter</td>
+    <td>400</td>
+    <td>404</td>
+    <td>263</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: {
+    &quot;code&quot;: 1,
+    &quot;type&quot;: &quot;error&quot;,
+    &quot;message&quot;: &quot;Pet not found&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>getPetById</td>
+    <td>unauthorized</td>
+    <td>401</td>
+    <td>404</td>
+    <td>265</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: {
+    &quot;code&quot;: 1,
+    &quot;type&quot;: &quot;error&quot;,
+    &quot;message&quot;: &quot;Pet not found&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>updatePetWithForm</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>404</td>
+    <td>263</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: {
+    &quot;code&quot;: 404,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;not found&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>updatePetWithForm</td>
+    <td>missing-required-parameter</td>
+    <td>400</td>
+    <td>404</td>
+    <td>262</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: {
+    &quot;code&quot;: 404,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;not found&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>updatePetWithForm</td>
+    <td>unauthorized</td>
+    <td>401</td>
+    <td>404</td>
+    <td>263</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: {
+    &quot;code&quot;: 404,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;not found&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>deletePet</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>404</td>
+    <td>265</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;DELETE&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: &quot;&quot;
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>deletePet</td>
+    <td>missing-required-parameter</td>
+    <td>400</td>
+    <td>404</td>
+    <td>261</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;DELETE&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: &quot;&quot;
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>deletePet</td>
+    <td>unauthorized</td>
+    <td>401</td>
+    <td>404</td>
+    <td>262</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;DELETE&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/pet/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: &quot;&quot;
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status passed">PASSED</span></td>
+    <td>getInventory</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>200</td>
+    <td>265</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/store/inventory&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 200,
+  &quot;body&quot;: {
+    &quot;*)(uid=*&quot;: 1,
+    &quot;sold&quot;: 284,
+    &quot;INVALID_STATUS&quot;: 1,
+    &quot;9223372016900075581&quot;: 1,
+    &quot;string&quot;: 283,
+    &quot;AVALABLE&quot;: 1,
+    &quot;pending&quot;: 42,
+    &quot;available&quot;: 310,
+    &quot;Not Available&quot;: 1,
+    &quot;active&quot;: 1,
+    &quot;unknown&quot;: 2,
+    &quot;invalid_status&quot;: 3,
+    &quot;Available&quot;: 2,
+    &quot;verfuegbar&quot;: 2
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>getInventory</td>
+    <td>unauthorized</td>
+    <td>401</td>
+    <td>200</td>
+    <td>287</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/store/inventory&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 200,
+  &quot;body&quot;: {
+    &quot;*)(uid=*&quot;: 1,
+    &quot;sold&quot;: 284,
+    &quot;INVALID_STATUS&quot;: 1,
+    &quot;9223372016900075581&quot;: 1,
+    &quot;string&quot;: 283,
+    &quot;AVALABLE&quot;: 1,
+    &quot;pending&quot;: 42,
+    &quot;available&quot;: 310,
+    &quot;Not Available&quot;: 1,
+    &quot;active&quot;: 1,
+    &quot;unknown&quot;: 2,
+    &quot;invalid_status&quot;: 3,
+    &quot;Available&quot;: 2,
+    &quot;verfuegbar&quot;: 2
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>placeOrder</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>415</td>
+    <td>261</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/store/order&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 415,
+  &quot;body&quot;: {
+    &quot;code&quot;: 415,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;com.sun.jersey.api.MessageException: A message body reader for Java class io.swagger.sample.model.Order, and Java type class io.swagger.sample.model.Order, and MIME media type application/x-www-form-urlencoded was not found.\nThe registered message body readers compatible with the MIME media type are:\n*/* -&gt;\n  com.sun.jersey.core.impl.provider.entity.FormProvider\n  com.sun.jersey.core.impl.provider.entity.StringProvider\n  com.sun.jersey.core.impl.provider.entity.ByteArrayProvider\n  com.sun.jersey.core.impl.provider.entity.FileProvider\n  com.sun.jersey.core.impl.provider.entity.InputStreamProvider\n  com.sun.jersey.core.impl.provider.entity.DataSourceProvider\n  com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.ReaderProvider\n  com.sun.jersey.core.impl.provider.entity.DocumentProvider\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader\n  com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$General\n  com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider\n  com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General\n  com.sun.jersey.core.impl.provider.entity.EntityHolderReader\n  com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JacksonProviderProxy\napplication/x-www-form-urlencoded -&gt;\n  com.sun.jersey.core.impl.provider.entity.FormProvider\n  com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider\n&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>getOrderById</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>404</td>
+    <td>263</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/store/order/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: {
+    &quot;code&quot;: 1,
+    &quot;type&quot;: &quot;error&quot;,
+    &quot;message&quot;: &quot;Order not found&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>getOrderById</td>
+    <td>missing-required-parameter</td>
+    <td>400</td>
+    <td>404</td>
+    <td>272</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/store/order/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: {
+    &quot;code&quot;: 1,
+    &quot;type&quot;: &quot;error&quot;,
+    &quot;message&quot;: &quot;Order not found&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>deleteOrder</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>404</td>
+    <td>261</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;DELETE&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/store/order/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: {
+    &quot;code&quot;: 404,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;Order Not Found&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>deleteOrder</td>
+    <td>missing-required-parameter</td>
+    <td>400</td>
+    <td>404</td>
+    <td>265</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;DELETE&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/store/order/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: {
+    &quot;code&quot;: 404,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;Order Not Found&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>createUsersWithListInput</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>415</td>
+    <td>268</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/user/createWithList&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 415,
+  &quot;body&quot;: {
+    &quot;code&quot;: 415,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;com.sun.jersey.api.MessageException: A message body reader for Java class java.util.List, and Java type java.util.List&lt;io.swagger.sample.model.User&gt;, and MIME media type application/x-www-form-urlencoded was not found.\nThe registered message body readers compatible with the MIME media type are:\n*/* -&gt;\n  com.sun.jersey.core.impl.provider.entity.FormProvider\n  com.sun.jersey.core.impl.provider.entity.StringProvider\n  com.sun.jersey.core.impl.provider.entity.ByteArrayProvider\n  com.sun.jersey.core.impl.provider.entity.FileProvider\n  com.sun.jersey.core.impl.provider.entity.InputStreamProvider\n  com.sun.jersey.core.impl.provider.entity.DataSourceProvider\n  com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.ReaderProvider\n  com.sun.jersey.core.impl.provider.entity.DocumentProvider\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader\n  com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$General\n  com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider\n  com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General\n  com.sun.jersey.core.impl.provider.entity.EntityHolderReader\n  com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JacksonProviderProxy\napplication/x-www-form-urlencoded -&gt;\n  com.sun.jersey.core.impl.provider.entity.FormProvider\n  com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider\n&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>getUserByName</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>404</td>
+    <td>269</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/user/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: {
+    &quot;code&quot;: 1,
+    &quot;type&quot;: &quot;error&quot;,
+    &quot;message&quot;: &quot;User not found&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>getUserByName</td>
+    <td>missing-required-parameter</td>
+    <td>400</td>
+    <td>404</td>
+    <td>265</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/user/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: {
+    &quot;code&quot;: 1,
+    &quot;type&quot;: &quot;error&quot;,
+    &quot;message&quot;: &quot;User not found&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>updateUser</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>415</td>
+    <td>266</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;PUT&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/user/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 415,
+  &quot;body&quot;: {
+    &quot;code&quot;: 415,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;com.sun.jersey.api.MessageException: A message body reader for Java class io.swagger.sample.model.User, and Java type class io.swagger.sample.model.User, and MIME media type application/x-www-form-urlencoded was not found.\nThe registered message body readers compatible with the MIME media type are:\n*/* -&gt;\n  com.sun.jersey.core.impl.provider.entity.FormProvider\n  com.sun.jersey.core.impl.provider.entity.StringProvider\n  com.sun.jersey.core.impl.provider.entity.ByteArrayProvider\n  com.sun.jersey.core.impl.provider.entity.FileProvider\n  com.sun.jersey.core.impl.provider.entity.InputStreamProvider\n  com.sun.jersey.core.impl.provider.entity.DataSourceProvider\n  com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.ReaderProvider\n  com.sun.jersey.core.impl.provider.entity.DocumentProvider\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader\n  com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$General\n  com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider\n  com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General\n  com.sun.jersey.core.impl.provider.entity.EntityHolderReader\n  com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JacksonProviderProxy\napplication/x-www-form-urlencoded -&gt;\n  com.sun.jersey.core.impl.provider.entity.FormProvider\n  com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider\n&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>updateUser</td>
+    <td>missing-required-parameter</td>
+    <td>400</td>
+    <td>415</td>
+    <td>264</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;PUT&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/user/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 415,
+  &quot;body&quot;: {
+    &quot;code&quot;: 415,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;com.sun.jersey.api.MessageException: A message body reader for Java class io.swagger.sample.model.User, and Java type class io.swagger.sample.model.User, and MIME media type application/x-www-form-urlencoded was not found.\nThe registered message body readers compatible with the MIME media type are:\n*/* -&gt;\n  com.sun.jersey.core.impl.provider.entity.FormProvider\n  com.sun.jersey.core.impl.provider.entity.StringProvider\n  com.sun.jersey.core.impl.provider.entity.ByteArrayProvider\n  com.sun.jersey.core.impl.provider.entity.FileProvider\n  com.sun.jersey.core.impl.provider.entity.InputStreamProvider\n  com.sun.jersey.core.impl.provider.entity.DataSourceProvider\n  com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.ReaderProvider\n  com.sun.jersey.core.impl.provider.entity.DocumentProvider\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader\n  com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$General\n  com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider\n  com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General\n  com.sun.jersey.core.impl.provider.entity.EntityHolderReader\n  com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JacksonProviderProxy\napplication/x-www-form-urlencoded -&gt;\n  com.sun.jersey.core.impl.provider.entity.FormProvider\n  com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider\n&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>deleteUser</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>404</td>
+    <td>265</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;DELETE&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/user/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: &quot;&quot;
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>deleteUser</td>
+    <td>missing-required-parameter</td>
+    <td>400</td>
+    <td>404</td>
+    <td>262</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;DELETE&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/user/1&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 404,
+  &quot;body&quot;: &quot;&quot;
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status passed">PASSED</span></td>
+    <td>loginUser</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>200</td>
+    <td>262</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/user/login&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 200,
+  &quot;body&quot;: {
+    &quot;code&quot;: 200,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;logged in user session:1789647006037&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>loginUser</td>
+    <td>missing-required-parameter</td>
+    <td>400</td>
+    <td>200</td>
+    <td>264</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/user/login&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 200,
+  &quot;body&quot;: {
+    &quot;code&quot;: 200,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;logged in user session:1789647006301&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status passed">PASSED</span></td>
+    <td>logoutUser</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>200</td>
+    <td>265</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/user/logout&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 200,
+  &quot;body&quot;: {
+    &quot;code&quot;: 200,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;ok&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>createUsersWithArrayInput</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>415</td>
+    <td>263</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/user/createWithArray&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 415,
+  &quot;body&quot;: {
+    &quot;code&quot;: 415,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;com.sun.jersey.api.MessageException: A message body reader for Java class [Lio.swagger.sample.model.User;, and Java type class [Lio.swagger.sample.model.User;, and MIME media type application/x-www-form-urlencoded was not found.\nThe registered message body readers compatible with the MIME media type are:\n*/* -&gt;\n  com.sun.jersey.core.impl.provider.entity.FormProvider\n  com.sun.jersey.core.impl.provider.entity.StringProvider\n  com.sun.jersey.core.impl.provider.entity.ByteArrayProvider\n  com.sun.jersey.core.impl.provider.entity.FileProvider\n  com.sun.jersey.core.impl.provider.entity.InputStreamProvider\n  com.sun.jersey.core.impl.provider.entity.DataSourceProvider\n  com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.ReaderProvider\n  com.sun.jersey.core.impl.provider.entity.DocumentProvider\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader\n  com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$General\n  com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider\n  com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General\n  com.sun.jersey.core.impl.provider.entity.EntityHolderReader\n  com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JacksonProviderProxy\napplication/x-www-form-urlencoded -&gt;\n  com.sun.jersey.core.impl.provider.entity.FormProvider\n  com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider\n&quot;
+  }
+}</pre></details></td>
+  </tr>
+  <tr>
+    <td><span class="status failed">FAILED</span></td>
+    <td>createUser</td>
+    <td>happy-path</td>
+    <td>200</td>
+    <td>415</td>
+    <td>267</td>
+    <td><details><summary>Details</summary><h4>Request</h4><pre>{
+  &quot;method&quot;: &quot;POST&quot;,
+  &quot;url&quot;: &quot;https://petstore.swagger.io/v2/user&quot;
+}</pre><h4>Response</h4><pre>{
+  &quot;status&quot;: 415,
+  &quot;body&quot;: {
+    &quot;code&quot;: 415,
+    &quot;type&quot;: &quot;unknown&quot;,
+    &quot;message&quot;: &quot;com.sun.jersey.api.MessageException: A message body reader for Java class io.swagger.sample.model.User, and Java type class io.swagger.sample.model.User, and MIME media type application/x-www-form-urlencoded was not found.\nThe registered message body readers compatible with the MIME media type are:\n*/* -&gt;\n  com.sun.jersey.core.impl.provider.entity.FormProvider\n  com.sun.jersey.core.impl.provider.entity.StringProvider\n  com.sun.jersey.core.impl.provider.entity.ByteArrayProvider\n  com.sun.jersey.core.impl.provider.entity.FileProvider\n  com.sun.jersey.core.impl.provider.entity.InputStreamProvider\n  com.sun.jersey.core.impl.provider.entity.DataSourceProvider\n  com.sun.jersey.core.impl.provider.entity.XMLJAXBElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.ReaderProvider\n  com.sun.jersey.core.impl.provider.entity.DocumentProvider\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$StreamSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$SAXSourceReader\n  com.sun.jersey.core.impl.provider.entity.SourceProvider$DOMSourceReader\n  com.sun.jersey.json.impl.provider.entity.JSONJAXBElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONArrayProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONObjectProvider$General\n  com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider\n  com.sun.jersey.core.impl.provider.entity.XMLRootElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLListElementProvider$General\n  com.sun.jersey.core.impl.provider.entity.XMLRootObjectProvider$General\n  com.sun.jersey.core.impl.provider.entity.EntityHolderReader\n  com.sun.jersey.json.impl.provider.entity.JSONRootElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JSONListElementProvider$General\n  com.sun.jersey.json.impl.provider.entity.JacksonProviderProxy\napplication/x-www-form-urlencoded -&gt;\n  com.sun.jersey.core.impl.provider.entity.FormProvider\n  com.sun.jersey.core.impl.provider.entity.FormMultivaluedMapProvider\n&quot;
+  }
+}</pre></details></td>
+  </tr></tbody>
+    </table>
+  </main>
+</body>
+</html>
